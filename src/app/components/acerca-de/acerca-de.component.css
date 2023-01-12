@@ -5,7 +5,7 @@ div{
     background-color: #F9BA58;
     text-align: center;
 }
-/*Estilo de la foto de perfil*/ 
+/*foto de perfil*/ 
 @media(min-width: 576px){
     #fotodeperfil{
         position: absolute;
