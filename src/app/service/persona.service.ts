@@ -9,7 +9,7 @@ import { persona } from '../model/persona.model';
 })
 
 export class PersonaService {
-  URL = environment.URL + 'personas/';
+  URL = 'https://back-end-production-1a2c.up.railway.app/personas/';
 
   constructor(private http: HttpClient) { }
 
