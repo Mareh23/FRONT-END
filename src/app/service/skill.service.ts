@@ -8,7 +8,7 @@ import { Skill } from '../model/skill';
   providedIn: 'root'
 })
 export class SkillService {
-  URL = 'https://back-end-production-1a2c.up.railway.app/skill/';
+  URL = environment.URL + 'skill/';
 
   constructor(private httpClient: HttpClient) { }
   
