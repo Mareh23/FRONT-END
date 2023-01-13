@@ -15,15 +15,17 @@ div{
         left: 3%;
         top: 600px;
     }
+
+    .descripcion{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 @media(max-width: 575px){
     #fotodeperfil{
-        position: absolute;
-        width: 30%;
         border-radius: 100%;
         box-shadow: 3px 3px 3px grey;
-        left: 33%;
-        top: 950px;
     }
 }
 /*etiqueta nombre*/
