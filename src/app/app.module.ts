@@ -11,7 +11,6 @@ import { ExperienciaComponent } from './components/experiencia/experiencia.compo
 import { EducacionComponent } from './components/educacion/educacion.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HysComponent } from './components/hys/hys.component';
-import { ProyectoComponent } from './components/proyecto/proyecto.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from "@angular/common/http";
 import { HomeComponent } from './components/home/home.component';
@@ -28,8 +27,6 @@ import { EditAcercaDeComponent } from './components/acerca-de/edit-acerca-de.com
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
-import { EditProyectoComponent } from './components/proyecto/edit-proyecto.component';
-import { NewProyectoComponent } from './components/proyecto/new-proyecto.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +38,6 @@ import { NewProyectoComponent } from './components/proyecto/new-proyecto.compone
     ExperienciaComponent,
     EducacionComponent,
     HysComponent,
-    ProyectoComponent,
     FooterComponent,
     HomeComponent,
     LoginComponent,
@@ -51,9 +47,7 @@ import { NewProyectoComponent } from './components/proyecto/new-proyecto.compone
     EditeducacionComponent,
     EditSkillComponent,
     NewSkillComponent,
-    EditAcercaDeComponent,
-    EditProyectoComponent,
-    NewProyectoComponent
+    EditAcercaDeComponent
   ],
   imports: [
     BrowserModule,
