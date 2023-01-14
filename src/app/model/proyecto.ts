@@ -1,9 +1,9 @@
 export class Proyecto {
     id?: number;
-    nombreP: string;
-    descripcionP: string;    
-    constructor(nombreP: string, descripcionP: string){
-        this.nombreP = nombreP;
-        this.descripcionP= descripcionP;
+    nombre: string;
+    descripcion: string;    
+    constructor(nombre: string, descripcion: string){
+        this.nombre = nombre;
+        this.descripcion= descripcion;
     }
 }

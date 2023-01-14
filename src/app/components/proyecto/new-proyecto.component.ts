@@ -9,8 +9,8 @@ import { ProyectoService } from 'src/app/service/proyecto.service';
   styleUrls: ['./new-proyecto.component.css']
 })
 export class NewProyectoComponent implements OnInit {
-  nombreP: string = '';
-  descripcionP: string = '';
+  nombre: string = '';
+  descripcion: string = '';
 
   constructor(private sProyecto: ProyectoService, private router: Router) { }
 
@@ -18,7 +18,7 @@ export class NewProyectoComponent implements OnInit {
   }
 
   onCreate(): void{
-    const proyecto = new Proyecto(this.nombreP, this.descripcionP);
+    const proyecto = new Proyecto(this.nombre, this.descripcion);
     this.sProyecto.save(proyecto).subscribe(data=>{
       alert("Experiencia añadida");
       this.router.navigate(['']);
