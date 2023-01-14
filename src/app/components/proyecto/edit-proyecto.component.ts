@@ -19,7 +19,7 @@ export class EditProyectoComponent implements OnInit {
       data =>{
         this.proyecto = data;
       }, err =>{
-        alert("Error al modificar experiencia");
+        alert("Error al modificar proyecto");
         this.router.navigate(['']);
       }
     )
@@ -30,7 +30,7 @@ export class EditProyectoComponent implements OnInit {
     this.sProyecto.update(id, this.proyecto).subscribe(data =>{
       this.router.navigate(['']);
     }, err =>{
-      alert("Error al modificar experiencia");
+      alert("Error al modificar proyecto");
       this.router.navigate(['']);
     }
     )
