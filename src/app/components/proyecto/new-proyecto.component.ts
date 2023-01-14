@@ -9,8 +9,8 @@ import { ProyectoService } from 'src/app/service/proyecto.service';
   styleUrls: ['./new-proyecto.component.css']
 })
 export class NewProyectoComponent implements OnInit {
-  nombreP: string = '';
-  descripcionP: string = '';
+  nombreP: string;
+  descripcionP: string;
 
   constructor(private proyectoS: ProyectoService, private router: Router) { }
 
