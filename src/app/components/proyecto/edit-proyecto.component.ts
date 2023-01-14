@@ -11,15 +11,15 @@ import { ProyectoService } from 'src/app/service/proyecto.service';
 export class EditProyectoComponent implements OnInit {
   proyecto: Proyecto = null;
 
-  constructor(private proyectoS: ProyectoService, private activatedRouter: ActivatedRoute, private router: Router) { }
+  constructor(private sProyecto: ProyectoService, private activatedRouter: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.proyectoS.details(id).subscribe(
+    this.sProyecto.details(id).subscribe(
       data =>{
         this.proyecto = data;
       }, err =>{
-        alert("Error al modificar");
+        alert("Error al modificar experiencia");
         this.router.navigate(['']);
       }
     )
@@ -27,13 +27,12 @@ export class EditProyectoComponent implements OnInit {
 
   onUpdate(): void{
     const id = this.activatedRouter.snapshot.params['id'];
-    this.proyectoS.update(id, this.proyecto).subscribe(
-      data => {
-        this.router.navigate(['']);
-      }, err => {
-        alert("Error al modificar proyecto");
-        this.router.navigate(['']);
-      }
+    this.sProyecto.update(id, this.proyecto).subscribe(data =>{
+      this.router.navigate(['']);
+    }, err =>{
+      alert("Error al modificar experiencia");
+      this.router.navigate(['']);
+    }
     )
   }
 

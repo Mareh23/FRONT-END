@@ -11,33 +11,31 @@ import { TokenService } from 'src/app/service/token.service';
 export class ProyectoComponent implements OnInit {
   proyecto: Proyecto[] = [];
 
-  constructor(private proyectoS: ProyectoService,  private tokenService: TokenService) { }
+  constructor(private sProyecto: ProyectoService, private tokenService: TokenService) { }
+
   isLogged = false;
 
   ngOnInit(): void {
     this.cargarProyecto();
     if(this.tokenService.getToken()){
       this.isLogged = true;
-    } else {
+    }else{
       this.isLogged = false;
     }
   }
 
-  cargarProyecto():void{
-    this.proyectoS.lista().subscribe(
-      data =>{
-        this.proyecto = data;
-      }
-    )
+
+  cargarProyecto(): void{
+    this.sProyecto.lista().subscribe(data => {this.proyecto = data;}) 
   }
 
   delete(id?: number){
-    if(id != undefined){
-      this.proyectoS.delete(id).subscribe(
-        data =>{
+    if(id !=undefined){
+      this.sProyecto.delete(id).subscribe(
+        data => {
           this.cargarProyecto();
         }, err => {
-          alert("No se pudo eliminar");
+          alert("No se pudo borrar la experiencia");
         }
       )
     }
