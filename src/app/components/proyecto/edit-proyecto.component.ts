@@ -15,7 +15,7 @@ export class EditProyectoComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.sProyecto.details(id).subscribe(
+    this.sProyecto.detail(id).subscribe(
       data =>{
         this.proyecto = data;
       }, err =>{
