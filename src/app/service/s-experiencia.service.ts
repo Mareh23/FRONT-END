@@ -8,7 +8,7 @@ import { Experiencia } from '../model/experiencia';
   providedIn: 'root'
 })
 export class SExperienciaService {
-  URL = 'http://localhost:8080/explab/';
+  URL = 'https://back-end-production-9932.up.railway.app/explab/';
 
   constructor(private httpClient: HttpClient) { }
 
