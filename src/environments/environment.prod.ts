@@ -9,5 +9,5 @@ export const environment = {
     messagingSenderId: '1045740747201',
   },
   production: true,
-  //URL: 'https://back-end-production-48b4.up.railway.app/'
+  URL: 'https://back-end-production-1d37.up.railway.app/'
 };
